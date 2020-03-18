@@ -15,15 +15,15 @@ public class CalculatorTestMultiply {
     @DataProvider(name = "Данные для суммирования")
     public Object[][] dataForMinus() {
         return new Object[][]{
-                {1,2,-1},
-                {-1,-2,1},
-                {0,1,-1},
-                {5.4,5.2,0.2}
+                {1,2,2},
+                {-1,-2,2},
+                {0,1,0},
+                {1.2,0.2,0.24}
         };
     }
     @Test(dataProvider = "Данные для суммирования")
     public void testMul(double a, double b, double expectedResult){
-        double multiply =calculator.minus(a,b);
+        double multiply =calculator.multiply(a,b);
         Assert.assertEquals(multiply,expectedResult,"Ошибка при умножении");
     }
 }

@@ -24,6 +24,6 @@ public class CalculatorTestSum {
     @Test(dataProvider = "Данные для суммирования")
     public void testSum(double a, double b, double expectedResult){
         double sum =calculator.sum(a,b);
-        Assert.assertEquals(sum,expectedResult,"Суммирование");
+        Assert.assertEquals(sum,expectedResult,"Суммирование ошибочно");
     }
 }
